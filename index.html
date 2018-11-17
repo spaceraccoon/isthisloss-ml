@@ -38,7 +38,7 @@
           </div>
           <div id="controls" class="section-description" style="display: none">
             <p>
-              This image is <span id="probability"></span> loss.
+              This image is <span id="probability">100.00%</span> loss.
             </p>
             <input type="file" id="file" name="file" />
           </div>
@@ -58,19 +58,8 @@
   
     const init = async () => {
       loss = await tf.loadModel(LOSS_MODEL_PATH);
-      loss.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
       document.getElementById('controls').style.display = '';
       document.getElementById('status').style.display = 'none';
-      // const lossImg = document.getElementById('loss-img');
-      // lossImg.width = IMAGE_SIZE;
-      // lossImg.height = IMAGE_SIZE;
-      // if (lossImg.complete && lossImg.naturalHeight !== 0) {
-      //   predict(lossImg);
-      // } else {
-      //   lossImg.onload = () => {
-      //     predict(lossImg);
-      //   }
-      // }
     }
   
     /**
