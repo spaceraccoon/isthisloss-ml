@@ -4,9 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Is This Loss ML</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="A machine learning Loss classifier.">
+  <meta name="author" content="spaceraccoon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Is This Loss ML" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://spaceraccoon.github.io/isthisloss-ml/" />
+  <meta property="og:image" content="https://spaceraccoon.github.io/isthisloss-ml/images/loss.jpg" />
+  <meta property="og:description" content="A machine learning Loss classifier." /> 
 
   <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
@@ -59,7 +64,13 @@
       const lossImg = document.getElementById('loss-img');
       lossImg.width = IMAGE_SIZE;
       lossImg.height = IMAGE_SIZE;
-      predict(lossImg);
+      if (lossImg.complete && lossImg.naturalHeight !== 0) {
+        predict(lossImg);
+      } else {
+        lossImg.onload = () => {
+          predict(lossImg);
+        }
+      }
     }
   
     /**
