@@ -61,16 +61,16 @@
       loss.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
       document.getElementById('controls').style.display = '';
       document.getElementById('status').style.display = 'none';
-      const lossImg = document.getElementById('loss-img');
-      lossImg.width = IMAGE_SIZE;
-      lossImg.height = IMAGE_SIZE;
-      if (lossImg.complete && lossImg.naturalHeight !== 0) {
-        predict(lossImg);
-      } else {
-        lossImg.onload = () => {
-          predict(lossImg);
-        }
-      }
+      // const lossImg = document.getElementById('loss-img');
+      // lossImg.width = IMAGE_SIZE;
+      // lossImg.height = IMAGE_SIZE;
+      // if (lossImg.complete && lossImg.naturalHeight !== 0) {
+      //   predict(lossImg);
+      // } else {
+      //   lossImg.onload = () => {
+      //     predict(lossImg);
+      //   }
+      // }
     }
   
     /**
