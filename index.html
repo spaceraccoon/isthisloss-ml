@@ -57,7 +57,8 @@
     let loss;
   
     const init = async () => {
-      loss = await tf.loadModel(LOSS_MODEL_PATH);
+      // loss = await tf.loadModel(LOSS_MODEL_PATH);
+      // loss.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
       document.getElementById('controls').style.display = '';
       document.getElementById('status').style.display = 'none';
     }
