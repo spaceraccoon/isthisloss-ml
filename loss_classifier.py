@@ -11,7 +11,7 @@ from keras import backend as K
 
 
 # dimensions of our images.
-img_width, img_height = 200, 200
+img_width, img_height = 100, 100
 
 train_data_dir = 'data/train'
 validation_data_dir = 'data/validation'
@@ -78,4 +78,4 @@ model.fit_generator(
     validation_data=validation_generator,
     validation_steps=nb_validation_samples // batch_size)
 
-model.save_weights('loss.h5')
+model.save('model.h5')
