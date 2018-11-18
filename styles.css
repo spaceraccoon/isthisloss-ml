@@ -6,8 +6,8 @@ body {
   font-size: 1.8em;
 }
 
-.button {
-  border-radius: 100px;
+a {
+  text-decoration: none;
 }
 
 input {
@@ -18,12 +18,26 @@ input {
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
-  padding: 4rem 0;
+  padding: 4rem 0 2rem;
   text-align: center;
 }
 .section-heading,
 .section-description {
   margin-bottom: 3rem;
+}
+
+.footer {
+  padding-top: 0;
+  text-align: center;
+  color: #dcdcdc;
+}
+
+/* Text
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#probability {
+  color: #1EAEDB;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 /* Spinner
